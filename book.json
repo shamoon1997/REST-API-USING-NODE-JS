@@ -1,0 +1,10 @@
+{
+    "id": "BooksSchema",
+    "type": "Object",
+    "properties": {
+        "id": { "type": "number", "minimum": 1 },
+        "title": { "type": "string" },
+        "author": { "type": "string" }
+    },
+    "required": ["id", "title", "author"]
+}
