@@ -22,7 +22,7 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 app.get('/api/books', (req, res) => {
     fs.readFile('data.json', (err, data) => {
         if (err)
-            console.log(`Error while writing file in post  request ${error}`)
+            console.log(`Error while writing file in request ${error}`)
         else {
             books = JSON.parse(data);
             res.send(books);
