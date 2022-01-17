@@ -22,7 +22,7 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 app.get('/api/books', (req, res) => {
     fs.readFile('data.json', (err, data) => {
         if (err)
-            console.log(`Error while writing file in post ${error}`)
+            console.log(`Error while writing file in post  request ${error}`)
         else {
             books = JSON.parse(data);
             res.send(books);
@@ -46,7 +46,7 @@ function validatetherequest(req, res, next) {
     }
 }
 
-app.post('/api/books', validatetherequest, function(req, res) {
+app.post('/api/books', validatetherequest, function (req, res) {
     const book = {
         id: req.body.id,
         title: req.body.title,
@@ -61,7 +61,7 @@ app.post('/api/books', validatetherequest, function(req, res) {
     })
 })
 
-app.put('/api/books/:id', function(req, res) {
+app.put('/api/books/:id', function (req, res) {
     const id = req.params.id;
     for (var i = 0; i < books.length; i++) {
         if (id == books[i].id) {
@@ -83,7 +83,7 @@ app.put('/api/books/:id', function(req, res) {
     }
 })
 
-app.delete('/api/books/:id', function(req, res) {
+app.delete('/api/books/:id', function (req, res) {
     let flag = true;
     const id = req.params.id;
     for (var i = 0; i < books.length; i++) {
