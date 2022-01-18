@@ -21,9 +21,8 @@ jobs:
           TARGET: "/home/ubuntu/REST"
 
       - name: Rerun the application
-        run: sudo npm install
-      - run: sudo su  
-      - run: pm2 stop app
-      - run: pm2 save
-      - run: pm2 start index
-      - run: pm2 save    
+      script: |
+          cd ~/home/ubuntu/REST/
+          npm install
+          pm2 restart app
+          pm2 save    
