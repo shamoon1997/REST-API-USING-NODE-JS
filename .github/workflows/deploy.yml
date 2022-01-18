@@ -19,10 +19,10 @@ jobs:
           REMOTE_HOST: "ec2-54-67-60-224.us-west-1.compute.amazonaws.com"
           REMOTE_USER: "ubuntu"
           TARGET: "/home/ubuntu/REST"
-          
+
       - name: Rerun the application
-        - run: npm install
-        - run: pm2 stop index
-        - run: pm2 save
-        - run: pm2 start index
-        - run: pm2 save    
+        run: npm install
+        run: pm2 stop index
+        run: pm2 save
+        run: pm2 start index
+        run: pm2 save    
