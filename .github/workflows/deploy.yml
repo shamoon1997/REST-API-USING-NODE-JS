@@ -21,8 +21,4 @@ jobs:
           TARGET: "/home/ubuntu/REST"
 
       - name: Rerun the application
-        run: sudo npm install pm2 -g
-      - run: sudo su  
-      - run: sudo pm2 save
-      - run: sudo pm2 start index.js
-      - run: sudo pm2 save    
+        run: sh deploy.sh
