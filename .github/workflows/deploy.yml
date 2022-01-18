@@ -20,9 +20,9 @@ jobs:
           REMOTE_USER: "ubuntu"
           TARGET: "/home/ubuntu/REST"
 
-      - name: Rerun the application
-      script: |
-          cd ~/home/ubuntu/REST/
-          npm install
-          pm2 restart app
-          pm2 save    
+      with:
+        script: |
+        cd ~/home/ubuntu/REST/
+        npm install
+        pm2 restart app
+        pm2 save    
