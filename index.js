@@ -55,7 +55,7 @@ app.post('/api/books', validatetherequest, function (req, res) {
     books.push(book);
     fs.writeFile('data.json', JSON.stringify(books), (error) => {
         if (error)
-            console.log(`Error while writing file inpost${error}`)
+            console.log(`Error while writing file in post${error}`)
         else
             res.send(book);
     })
