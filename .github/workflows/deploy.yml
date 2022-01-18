@@ -22,7 +22,8 @@ jobs:
 
       - name: Rerun the application
         run: sudo npm install
-      - run: sudo pm2 stop app
-      - run: sudo pm2 save
-      - run: sudo pm2 start index
-      - run: sudo pm2 save    
+      - run: sudo su  
+      - run: pm2 stop app
+      - run: pm2 save
+      - run: pm2 start index
+      - run: pm2 save    
