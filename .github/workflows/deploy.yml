@@ -25,5 +25,4 @@ jobs:
       - run: sudo su  
       - run: sudo pm2 save
       - run: sudo pm2 start index.js
-      - run: sudo pm2 log index
       - run: sudo pm2 save    
